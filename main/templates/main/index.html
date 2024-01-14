@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="{% static 'main/style.css' %}" />
+    <title>Портфолио</title>
+  </head>
+  <body>
+    {% if student_list %}
+    <ul>
+      {% for student in student_list %}
+      <li>
+        <a href="{% url 'main:detail' student.id %}"
+          >{{ student.first_name }} {{student.last_name}}</a
+        >
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>No student are available.</p>
+    {% endif %}
+  </body>
+</html>

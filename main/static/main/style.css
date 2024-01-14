@@ -1,0 +1,15 @@
+a,p{
+    font-size: 1.6rem;
+}
+h1{
+    font-size: 4.6rem;
+}
+li a {
+    color: green;
+}
+ul, li{
+    font-size: 1.6rem;
+}
+body {
+    background: white url("images/background.png") no-repeat;
+}
