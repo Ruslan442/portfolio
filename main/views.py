@@ -95,3 +95,4 @@ class ParticipationInEventsViewSet(viewsets.ModelViewSet):
 class ParticipationResultsViewSet(viewsets.ModelViewSet):
     queryset = ParticipationResults.objects.all()
     serializer_class = ParticipationResultsSerializer
+

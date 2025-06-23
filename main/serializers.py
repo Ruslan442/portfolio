@@ -25,7 +25,7 @@ class ProjectsSerializer(serializers.ModelSerializer):
         if value > timezone.now().date():
             raise serializers.ValidationError("Дата создания проекта не может быть в будущем.")
         return value
-
+    
 
 class ParticipationInProjectsSerializer(serializers.ModelSerializer):
     class Meta:

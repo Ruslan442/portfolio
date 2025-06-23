@@ -38,6 +38,7 @@ class ParticipationInProjects(models.Model):
     project = models.ForeignKey(Projects, on_delete=models.CASCADE)
     start_date = models.DateField()
     end_date = models.DateField()
+    new_date = models.DateField()
 
     def __str__(self):
         return f"{self.student} - {self.project}"
